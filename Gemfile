@@ -10,6 +10,7 @@ gem 'rails', '~> 5.2.0'
 gem 'turbolinks', '~> 5'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry'
   gem 'rspec-rails'
 end

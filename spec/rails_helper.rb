@@ -25,7 +25,7 @@ Dir[Rails.root.join('spec/support/*.rb')].each { |f| require f }
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
-  config.include(NewsArticleHelper)
+  config.include(NewsFeedHelper)
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!

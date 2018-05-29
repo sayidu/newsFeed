@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'visitor visits newsfeed page' do
   scenario 'and seraches for a category' do
-    stub_article_headline
+    stub_news_feed(headline: { title: 'Tech Press Release' })
 
     visit news_feed_index_path
     fill_in 'category', with: 'health'

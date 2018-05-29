@@ -1,0 +1,27 @@
+<section class="newsfeed">
+  <h1> Top Headlines </h1>
+
+  <p>
+    <%= form_with url: news_feed_index_path do |form| %>
+      Category <%= form.text_field :category %>
+      <%= form.submit "Search" %>
+    <% end %>
+  <p>
+
+  <% if @top_headlines.nil? %>
+    <p> 
+      <h3>There are no top headlines for this category.</h3>
+    </p>
+  <% else %>
+    <p>
+      <% @top_headlines.each do |headline| %>
+        <h3> <%= link_to "#{headline.title}", headline.url %> </h3>
+        <p>
+          News Source: <%= headline.name %>
+          Published on: <%= headline.publishedAt %>
+        </p>
+      <% end %>
+    </p>
+   <% end %>
+
+</section>

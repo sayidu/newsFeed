@@ -19,9 +19,9 @@ describe 'news_feed/index.html.erb' do
     end
   end
 
-  def render_news_feed(top_headline: headline)
-    headline = OpenStruct.new(top_headline) unless top_headline.empty?
-    assign :top_headlines, [headline]
+  def render_news_feed(headline:)
+    headline = [OpenStruct.new(headline)] unless headline.empty?
+    assign :top_headlines, headline
     render template: 'news_feed/index'
   end
 end

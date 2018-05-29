@@ -1,24 +1,47 @@
-# README
+ ### NewsApp Feed
+ ``` 
+ Problem Set: Design a well tested rails app  using `https://newsapi.org/` that allows you to fetch news from 
+ a given category if the category does not exist.
+ eg `adadsfasfhjsfnews`,  return an appropriate error to the user 
+ ```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Setup
 
-Things you may want to cover:
+1. Get the code.
 
-* Ruby version
+        % git clone git@github.com:sayidu/newsFeed.git
 
-* System dependencies
+2. Setup your environment.
 
-* Configuration
+        % bundle install
 
-* Database creation
+3. Configure the app
 
-* Database initialization
+        % vim .env
 
-* How to run the test suite
+   At minimum, you will need:
+   * NEWS_API_ACCESS_TOKEN
+ 
+4. Start Rails Server
 
-* Services (job queues, cache servers, search engines, etc.)
+        % bin/rails server
 
-* Deployment instructions
+5. Verify that the app is up and running.
 
-* ...
+        % open http://localhost:3000
+
+
+
+```
+Example:
+
+Valid Category Input: health
+
+Output should be: A list of health articles displayed.
+
+```
+
+#### Testing
+1.  With the setup step above completed. 
+2. `cd` into the cloned folder
+4. run `rspec`

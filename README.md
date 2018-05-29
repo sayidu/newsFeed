@@ -30,18 +30,17 @@
 
         % open http://localhost:3000
 
-
+### UI Example
 
 ```
-Example:
 
 Valid Category Input: health
 
 Output should be: A list of health articles displayed.
 
 ```
+### Testing
 
-#### Testing
-1.  With the setup step above completed. 
+1.  With the setup steps above, completed. 
 2. `cd` into the cloned folder
 4. run `rspec`

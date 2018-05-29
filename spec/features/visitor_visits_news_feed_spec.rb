@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'visitor visits newsfeed page' do
-  scenario 'and seraches for a category' do
+  scenario 'and searches for a category' do
     stub_news_feed(headline: { title: 'Tech Press Release' })
 
     visit news_feed_index_path
@@ -11,3 +11,4 @@ feature 'visitor visits newsfeed page' do
     expect(page).to have_content('Tech Press Release')
   end
 end
+
